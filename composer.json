@@ -1,0 +1,24 @@
+{
+    "name": "ahmadsyamim/portfolio-bulma-theme",
+    "title": "PortfolioBulma",
+    "description": "",
+    "type": "laravel-module-theme",
+    "authors": [
+        {
+            "name": "Ahmad Syamim",
+            "email": "ahmad.syamim@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+            }
+        }
+    },
+    "require": {
+    },
+    "scripts": {
+        "dist": "tar -cvzf ./dist/PortfolioBulma.theme.tar.gz -C ./src ."
+    }
+}

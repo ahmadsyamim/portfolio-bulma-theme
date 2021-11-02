@@ -1,0 +1,6 @@
+{
+    "name": "PortfolioBulma",
+    "extends": "",
+    "asset-path": "PortfolioBulma",
+    "views-path": "PortfolioBulma"
+}
