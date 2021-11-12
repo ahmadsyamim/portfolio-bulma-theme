@@ -25,7 +25,7 @@
 
     <!-- Styles -->
     @php 
-     Asset::add('bulma','bulma/css/bulma.min.css');
+     Asset::add('bulma','PortfolioBulma/css/bulma.min.css');
     @endphp
     {!! Asset::styles() !!}
 
