@@ -6,14 +6,9 @@
     <!-- Title -->
     <div class="section-heading">
       <h3 class="title is-2">About Me</h3>
-      <h4 class="subtitle is-5">Jack of all trades, master of "some"</h4>
+      {{-- <h4 class="subtitle is-5">Jack of all trades, master of "some"</h4> --}}
       <div class="container">
-        <p>Web developer with more than <strong>4 years</strong> of well-rounded experience with a degree in the
-          field of
-          <strong>Computer Science</strong>, extensive knowledge of modern Web techniques and love for <strong>Coffee</strong>.
-          Looking for an opportunity to work and upgrade, as well as being involved in an organization that
-          believes
-          in gaining a competitive edge and giving back to the community.</p>
+        {!! Theme::getSetting('about-me') !!}
       </div>
     </div>
 
@@ -32,15 +27,15 @@
                 </tr>
                 <tr>
                   <td>Address:</td>
-                  <td>Guru's Lab</td>
+                  <td>{{ Theme::getSetting('profile.address') }}</td>
                 </tr>
                 <tr>
                   <td>Phone:</td>
-                  <td>0123-456789</td>
+                  <td>{{ Theme::getSetting('profile.phone') }}</td>
                 </tr>
                 <tr>
                   <td>Email:</td>
-                  <td>minion@despicable.me</td>
+                  <td>{{ Theme::getSetting('profile.email') }}</td>
                 </tr>
               </table>
             </div>
@@ -71,65 +66,19 @@
             <h3 class="title is-4">Skills</h3>
             <div class="content">
 
+              @foreach (Theme::getSetting('skills') as $title => $value)
               <article class="media">
                 <div class="media-content">
                   <div class="content">
                     <p>
-                      <strong>JavaScript:</strong>
+                      <strong>{{$title}}:</strong>
                       <br>
-                      <progress class="progress is-primary" value="90" max="100"></progress>
+                      <progress class="progress is-primary" value="{{$value}}" max="100"></progress>
                     </p>
                   </div>
                 </div>
               </article>
-
-              <article class="media">
-                <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <strong>Vue.js:</strong>
-                      <br>
-                      <progress class="progress is-primary" value="90" max="100"></progress>
-                    </p>
-                  </div>
-                </div>
-              </article>
-
-              <article class="media">
-                <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <strong>Node.js:</strong>
-                      <br>
-                      <progress class="progress is-primary" value="75" max="100"></progress>
-                    </p>
-                  </div>
-                </div>
-              </article>
-
-              <article class="media">
-                <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <strong>HTML5/CSS3</strong>
-                      <br>
-                      <progress class="progress is-primary" value="95" max="100"></progress>
-                    </p>
-                  </div>
-                </div>
-              </article>
-
-              <article class="media">
-                <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <strong>Databases</strong>
-                      <br>
-                      <progress class="progress is-primary" value="66" max="100"></progress>
-                    </p>
-                  </div>
-                </div>
-              </article>
+              @endforeach
             </div>
           </div>
         </div>

@@ -94,10 +94,10 @@ th {
     <div class="hero-body">
       <div class="container">Hello! I am
         <h1 class="title is-1">
-          Minion Tim
+          {{ Theme::getSetting('fullname') }}
         </h1>
         <h2 class="subtitle is-3">
-          Full Stack Web Developer
+          {{ Theme::getSetting('position') }}
         </h2>
       </div>
     </div>
