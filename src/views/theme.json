@@ -1,5 +1,6 @@
 {
     "name": "PortfolioBulma",
+    "package_name": "ahmadsyamim/portfolio-bulma-theme",
     "extends": "",
     "asset-path": "PortfolioBulma",
     "views-path": "PortfolioBulma",
